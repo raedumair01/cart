@@ -5,8 +5,8 @@ const ProductItem = ({ product, onViewDetails }) => {
   return (
     <View style={styles.product}>
       <View style={styles.infoContainer}>
-        <Text>{product.name}</Text>
-        <Text>${product.price}</Text>
+        <Text style={styles.name}>{product.name}</Text>
+        <Text style={styles.price}>${product.price}</Text>
         <Button
           title="View Details"
           onPress={() => onViewDetails(product)}
@@ -38,6 +38,18 @@ const styles = StyleSheet.create({
   button: {
     // Add custom button styles here
   },
+  name:{
+    color:'black',
+    fontSize:17,
+    fontWeight:'bold',
+    textAlign:'center'
+      },
+      price:{
+        color:'black',
+    fontSize:17,
+    fontWeight:'bold',
+    textAlign:'center'
+      },
 });
 
 export default ProductItem;

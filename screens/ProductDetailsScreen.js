@@ -7,8 +7,8 @@ const ProductDetailsScreen = ({ route }) => {
   return (
     <View style={styles.container}>
       <Image source={product.Image} style={styles.image} /> 
-      <Text>{product.name}</Text>
-      <Text>${product.price}</Text>
+      <Text style={styles.name}>{product.name}</Text>
+      <Text style={styles.price}>${product.price}</Text>
       <Button
       color="#841584" // Change the button color
       style={styles.button} // Apply custom styles
@@ -29,6 +29,18 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 20,
    
+  },
+  name:{
+color:'black',
+fontSize:17,
+fontWeight:'bold',
+textAlign:'center'
+  },
+  price:{
+    color:'black',
+    fontSize:17,
+fontWeight:'bold',
+textAlign:'center'
   },
 });
 

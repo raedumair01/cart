@@ -13,8 +13,8 @@ const CartScreen = ({ route }) => {
           <View style={styles.item}>
                   <Image source={item.Image} style={styles.image} /> 
 
-            <Text style>{item.name}</Text>
-            <Text>${item.price}</Text>
+            <Text style={styles.name}>{item.name}</Text>
+            <Text style={styles.price}>${item.price}</Text>
           </View>
         )}
         keyExtractor={(item, index) => index.toString()}
@@ -42,6 +42,18 @@ const styles = StyleSheet.create({
     marginBottom: 20,
    left:100
   },
+  name:{
+    color:'black',
+    fontSize:17,
+    fontWeight:'bold',
+    textAlign:'center'
+      },
+      price:{
+        color:'black',
+        fontSize:17,
+    fontWeight:'bold',
+    textAlign:'center'
+      },
 });
 
 export default CartScreen;
